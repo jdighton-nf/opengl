@@ -1,0 +1,17 @@
+OpenGl is an interface that your application can use to access the underlying graphics hardware. 
+
+I think I need to camp on the pre-processor for a while: 
+Lets say you have 3 files. main.cpp, engine.cpp, and car.cpp.
+
+Possible that car.cpp might need to know about engines, so you might #include engine.cpp
+The issue is that engine.cpp is already included in main. You you end up with a definition, which is not allowed. 
+File guards prevent this unintended recursion from carrying on. 
+
+When we were programming with Python and OpenGl we used a wrapper library called pyOpenGl, and another library called PyGame. 
+PyGame provided us with usefull tools for loading and preparing images, as well as with the ability to handle input, have a window, sound etc. 
+
+When working with C++ we use include GL/gl3w.h which is loads OpenGL, we also use GLFW/glfw3.h which provides utilities like windowing, input, etc. 
+
+Pipelining and parallelism are the name of the game. 
+
+Had to do a basic tutorial on Cmake because I have no idea what's going on. 
