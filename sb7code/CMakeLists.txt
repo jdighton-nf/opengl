@@ -20,15 +20,10 @@ find_package(OpenGL)
 
 set (CMAKE_DEBUG_POSTFIX "_d")
 
-if(WIN32)
-set(COMMON_LIBS sb7 optimized glfw3 debug glfw3_d ${GLFW_LIBRARIES} ${OPENGL_LIBRARIES})
-elseif (UNIX)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GLFW REQUIRED glfw3)
-set(COMMON_LIBS sb7 glfw3 X11 Xrandr Xinerama Xi Xxf86vm Xcursor GL rt dl)
-else()
-set(COMMON_LIBS sb7)
-endif()
+set(COMMON_LIBS sb7 glfw X11 Xrandr Xinerama Xi Xxf86vm Xcursor GL rt dl)
+
 
 set(COMMON_LIBS ${COMMON_LIBS} ${EXTRA_LIBS})
 
@@ -45,89 +40,90 @@ add_library(sb7
 set(RUN_DIR ${PROJECT_SOURCE_DIR}/bin)
 
 set(EXAMPLES
-  alienrain
-  basicfbo
-  bindlesstex
-  blendmatrix
-  blinnphong
-  bumpmapping
-  clipdistance
-  csflocking
-  compressrgtc
-  cubemapenv
-  cubicbezier
-  cullindirect
-  deferredshading
-  depthclamp
-  dflandscape
-  dispmap
-  dof
-  envmapsphere
-  equirectangular
-  fontdemo
-  fragcolorfrompos
-  fragmentlist
-  grass
-  gsculling
-  gslayered
-  gsquads
-  gstessellate
-  hdrbloom
-  hdrexposure
-  hdrtonemap
-  hqfilter
-  indexedcube
-  indirectmaterial
-  instancedattribs
-  julia
-  ktxview
-  linesmooth
-  mirrorclampedge
-  movingtri
-  msaanative
-  multidrawindirect
-  multiscissor
-  multiviewport
-  noperspective
-  normalviewer
-  objectexploder
-  ompparticles
-  packetbuffer
-  perpixelgloss
-  phonglighting
-  polygonsmooth
-  prefixsum
-  pmbfractal
-  pmbstreaming
-  prefixsum2d
-  programinfo
-  raytracer
-  rimlight
-  sampleshading
-# sb6mrender
-  sdfdemo
-  shadowmapping
-  shapedpoints
-  simpleclear
-  simpletexcoords
-  simpletexture
-  singlepoint
-  singletri
-  sparsetexture
-  spinnycube
-  springmass
-  ssao
-  starfield
-  stereo
-  subroutines
-  tessellatedcube
-  tessellatedgstri
-  tessellatedtri
-  tessmodes
-  tesssubdivmodes
-  toonshading
-  tunnel
-  wrapmodes
+  red_window
+  #alienrain
+  #basicfbo
+  #bindlesstex
+  #blendmatrix
+  #blinnphong
+  #bumpmapping
+  #clipdistance
+  #csflocking
+  #compressrgtc
+  #cubemapenv
+  #cubicbezier
+  #cullindirect
+  #deferredshading
+  #depthclamp
+  #dflandscape
+  #dispmap
+  #dof
+  #envmapsphere
+  #equirectangular
+  #fontdemo
+  #fragcolorfrompos
+  #fragmentlist
+  #grass
+  #gsculling
+  #gslayered
+  #gsquads
+  #gstessellate
+  #hdrbloom
+  #hdrexposure
+  #hdrtonemap
+  #hqfilter
+  #indexedcube
+  #indirectmaterial
+  #instancedattribs
+  #julia
+  #ktxview
+  #linesmooth
+  #mirrorclampedge
+  #movingtri
+  #msaanative
+  #multidrawindirect
+  #multiscissor
+  #multiviewport
+  #noperspective
+  #normalviewer
+  #objectexploder
+  #ompparticles
+  #packetbuffer
+  #perpixelgloss
+  #phonglighting
+  #polygonsmooth
+  #prefixsum
+  #pmbfractal
+  #pmbstreaming
+  #prefixsum2d
+  #programinfo
+  #raytracer
+  #rimlight
+  #sampleshading
+# #sb6mrender
+  #sdfdemo
+  #shadowmapping
+  #shapedpoints
+  #simpleclear
+  #simpletexcoords
+  #simpletexture
+  #singlepoint
+  #singletri
+  #sparsetexture
+  #spinnycube
+  #springmass
+  #ssao
+  #starfield
+  #stereo
+  #subroutines
+  #tessellatedcube
+  #tessellatedgstri
+  #tessellatedtri
+  #tessmodes
+  #tesssubdivmodes
+  #toonshading
+  #tunnel
+  #wrapmodes
 )
 
 find_package(OpenMP)

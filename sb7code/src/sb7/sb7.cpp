@@ -25,6 +25,8 @@
 
 #include <sb7.h>
 
+// this is declared as a pure virtual, which means that it MUST be defined elsewhere later on 
+// I think this is here just to let us know what sb7::application is abstract and can't be instantiated 
 sb7::application * sb7::application::app = 0;
 
 #include <GL/glext.h>

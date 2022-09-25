@@ -26,23 +26,17 @@
 #ifndef __SB7_H__
 #define __SB7_H__
 
-#ifdef WIN32 // if it's not windows, it's probably unix 
-    #pragma once
-    #define _CRT_SECURE_NO_WARNINGS 1
+#include <unistd.h> // header file that provides access to the POSIX operating system API 
+#define Sleep(t) sleep(t)
 
-    #define WIN32_LEAN_AND_MEAN 1
-    #include <Windows.h>
-#else
-    #include <unistd.h> // header file that provides access to the POSIX operating system API 
-    #define Sleep(t) sleep(t)
-#endif
+// GL3W is a library the laods pointers to OpenGL functions at runtime. Only loads the core entry points
+// for versions 3 and 4 - this dependent on python since it uses it for its code generation 
+#include "GL/gl3w.h" 
 
-#include "GL/gl3w.h" // opengl loading library. loads pointers to OpenGL functions at runtime. Overides the need to include gl.h at all. 
-
-#define GLFW_NO_GLU 1
+#define GLFW_NO_GLU 1                // turn off the loader functionality for GLFW
 #define GLFW_INCLUDE_GLCOREARB 1
 
-#include "GLFW/glfw3.h"
+#include "GLFW/glfw3.h" // load the wrangler, allows managing context, making windows, etc 
 
 #include "sb7ext.h"
 
@@ -56,6 +50,8 @@ namespace sb7
 class application
 {
 private:
+    // static variables are shared by all members of the class - there cannot exist multiple copies
+    // looks like this is some sort of debug function
     static void APIENTRY debug_callback(GLenum source,
                                         GLenum type,
                                         GLuint id,
@@ -65,25 +61,26 @@ private:
                                         GLvoid* userParam);
 
 public:
-    application() {}
-    virtual ~application() {}
-    virtual void run(sb7::application* the_app)
+    application() {}            // constructor
+    virtual ~application() {}   // destructor
+    virtual void run(sb7::application* the_app) // this must be extended
     {
         bool running = true;
+        // app is a pointer to an sb7::application which was created during class initialization 
         app = the_app;
 
         if (!glfwInit()) // try to initialize glfw 
-        {
+        {   // fprintf - send formatted output to a stream 
             fprintf(stderr, "Failed to initialize GLFW\n");
             return;
         }
 
-        init();
-
+        init(); // set window height/width and some flags
+        // where does info come from? 
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, info.majorVersion);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, info.minorVersion);
 
-#ifndef _DEBUG
+#ifndef _DEBUG // if _DEBUG compiler flag 
         if (info.flags.debug)
 #endif /* _DEBUG */
         {
@@ -112,6 +109,7 @@ public:
 //        }
 //        else
         {
+            // window is a pointer to a GLFWwindow which was declared in the class initialization 
             window = glfwCreateWindow(info.windowWidth, info.windowHeight, info.title, info.flags.fullscreen ? glfwGetPrimaryMonitor() : NULL, NULL);
             if (!window)
             {
@@ -136,7 +134,13 @@ public:
 
         // info.flags.stereo = (glfwGetWindowParam(GLFW_STEREO) ? 1 : 0);
 
+        // load glfw which gives us context and window handling along with input
+        // get a window and make it the current context 
+        // load pointers to the opengl driver functions which are supported, these live in the 
+        // driver implementation, we are just loading pointers to them 
+
         gl3wInit();
+
 
 #ifdef _DEBUG
         fprintf(stderr, "VENDOR: %s\n", (char *)glGetString(GL_VENDOR));
@@ -294,6 +298,9 @@ protected:
     static      sb7::application * app;
     GLFWwindow* window;
 
+    // these functions will be defined in the class which extends sb7::application, but because the 
+    // location in memory of the class is passed in as a pointer, we must tell the app where to actually
+    // access these functions - through the pointer to the class instance in memory 
     static void glfw_onResize(GLFWwindow* window, int w, int h)
     {
         app->onResize(w, h);
@@ -341,15 +348,21 @@ int CALLBACK WinMain(HINSTANCE hInstance,           \
     delete app;                                     \
     return 0;                                       \
 }
+
+/* I guess this is just an easy way to ship the main function with with header? instead of 
+the user having to just know exactly how to define main()?  */
+
 #elif defined _LINUX || defined __APPLE__
 #define DECLARE_MAIN(a)                             \
 int main(int argc, const char ** argv)              \
 {                                                   \
+                                                    \
     a *app = new a;                                 \
     app->run(app);                                  \
     delete app;                                     \
     return 0;                                       \
-}
+}                                                   \
+
 #else
 #error Undefined platform!
 #endif
