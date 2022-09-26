@@ -9,8 +9,14 @@
 class my_application : public sb7::application{
 public: 
     void render(double currentTime){
-        static const GLfloat red[] = { 1.0f, 0.0f, 0.0f, 1.0f };
-        glClearBufferfv(GL_COLOR, 0, red);
+        const GLfloat color[] = { 
+                (float) sin (currentTime) * 0.5f + 0.5f, 
+                (float) cos (currentTime) * 0.5f + 0.5f, 
+                0.0f, 
+                1.0f
+            };
+            printf("%d\n", ((float) sin (currentTime) * 0.5f + 0.5f)); 
+        glClearBufferfv(GL_COLOR, 0, color);
 
     }
 };

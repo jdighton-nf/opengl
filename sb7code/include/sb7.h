@@ -298,9 +298,13 @@ protected:
     static      sb7::application * app;
     GLFWwindow* window;
 
-    // these functions will be defined in the class which extends sb7::application, but because the 
-    // location in memory of the class is passed in as a pointer, we must tell the app where to actually
-    // access these functions - through the pointer to the class instance in memory 
+    // so all the functions we defined in our extension of the class come from the declarations 
+    // about, the issue is that we pass our extended class as a type into a macro that creates an 
+    // instance with new and gives us a pointer to it
+    // this basically means that we can't call any of those functions unless we know where to find them
+    // these are defined as static and they basically just forward the function to calls from the 
+    // class definition to wherever the app actually is in memory 
+
     static void glfw_onResize(GLFWwindow* window, int w, int h)
     {
         app->onResize(w, h);
@@ -336,21 +340,23 @@ protected:
 };
 
 #if defined _WIN32
-#define DECLARE_MAIN(a)                             \
+#define DECLARE_MAIN(application_t)                             \
 sb7::application *app = 0;                          \
 int CALLBACK WinMain(HINSTANCE hInstance,           \
                      HINSTANCE hPrevInstance,       \
                      LPSTR lpCmdLine,               \
                      int nCmdShow)                  \
 {                                                   \
-    a *app = new a;                                 \
+    application_t *app = new application_t;                                 \
     app->run(app);                                  \
     delete app;                                     \
     return 0;                                       \
 }
 
-/* I guess this is just an easy way to ship the main function with with header? instead of 
-the user having to just know exactly how to define main()?  */
+/* I guess this is just an easy way to ship the main function with with header? 
+    makes it to the user doesn't have to just magically know how main is defines
+    plus since it's brought in with sb7.h it's easy to just call the macro 
+*/
 
 #elif defined _LINUX || defined __APPLE__
 #define DECLARE_MAIN(a)                             \

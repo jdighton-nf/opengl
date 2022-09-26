@@ -15,3 +15,19 @@ When working with C++ we use include GL/gl3w.h which is loads OpenGL, we also us
 Pipelining and parallelism are the name of the game. 
 
 Had to do a basic tutorial on Cmake because I have no idea what's going on. 
+- Update, cmake now makes sense. 
+
+Had to spend sometime reviewing the code for gl3w to understand what was happening. 
+Basically it downloads to latest ARB header and loads pointers to all the OpenGl functions
+using glXGetProcAddress()
+
+Spend some time studying the code for the sb7 framework and it pretty well makes sense now. 
+Simply put it does the following: 
+-get glfw3 for handling windows, input, and context
+-create the window
+-make the window the current context
+-load pointers to all the GL functions
+-declare some basic functions 
+-establish basic flow and gives us a template to work with 
+-declare a pointer to an instance of an application which is a pure virtual, this
+prevents a 'bare' instantiation. 

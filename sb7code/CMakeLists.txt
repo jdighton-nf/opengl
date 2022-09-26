@@ -39,92 +39,10 @@ add_library(sb7
 
 set(RUN_DIR ${PROJECT_SOURCE_DIR}/bin)
 
+# set the name of the thing to build 
 set(EXAMPLES
   fragment_shader
-  #red_window
-  #alienrain
-  #basicfbo
-  #bindlesstex
-  #blendmatrix
-  #blinnphong
-  #bumpmapping
-  #clipdistance
-  #csflocking
-  #compressrgtc
-  #cubemapenv
-  #cubicbezier
-  #cullindirect
-  #deferredshading
-  #depthclamp
-  #dflandscape
-  #dispmap
-  #dof
-  #envmapsphere
-  #equirectangular
-  #fontdemo
-  #fragcolorfrompos
-  #fragmentlist
-  #grass
-  #gsculling
-  #gslayered
-  #gsquads
-  #gstessellate
-  #hdrbloom
-  #hdrexposure
-  #hdrtonemap
-  #hqfilter
-  #indexedcube
-  #indirectmaterial
-  #instancedattribs
-  #julia
-  #ktxview
-  #linesmooth
-  #mirrorclampedge
-  #movingtri
-  #msaanative
-  #multidrawindirect
-  #multiscissor
-  #multiviewport
-  #noperspective
-  #normalviewer
-  #objectexploder
-  #ompparticles
-  #packetbuffer
-  #perpixelgloss
-  #phonglighting
-  #polygonsmooth
-  #prefixsum
-  #pmbfractal
-  #pmbstreaming
-  #prefixsum2d
-  #programinfo
-  #raytracer
-  #rimlight
-  #sampleshading
-# #sb6mrender
-  #sdfdemo
-  #shadowmapping
-  #shapedpoints
-  #simpleclear
-  #simpletexcoords
-  #simpletexture
-  #singlepoint
-  #singletri
-  #sparsetexture
-  #spinnycube
-  #springmass
-  #ssao
-  #starfield
-  #stereo
-  #subroutines
-  #tessellatedcube
-  #tessellatedgstri
-  #tessellatedtri
-  #tessmodes
-  #tesssubdivmodes
-  #toonshading
-  #tunnel
-  #wrapmodes
+  
 )
 
 find_package(OpenMP)
