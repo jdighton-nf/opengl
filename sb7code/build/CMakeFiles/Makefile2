@@ -72,7 +72,7 @@ CMAKE_BINARY_DIR = /home/jdighton/Code/opengl/sb7code/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/red_window.dir/all
+all: CMakeFiles/fragment_shader.dir/all
 all: CMakeFiles/sb7.dir/all
 
 .PHONY : all
@@ -85,7 +85,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/release.dir/clean
 clean: CMakeFiles/debug.dir/clean
-clean: CMakeFiles/red_window.dir/clean
+clean: CMakeFiles/fragment_shader.dir/clean
 clean: CMakeFiles/sb7.dir/clean
 
 .PHONY : clean
@@ -145,31 +145,31 @@ CMakeFiles/debug.dir/clean:
 .PHONY : CMakeFiles/debug.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/red_window.dir
+# Target rules for target CMakeFiles/fragment_shader.dir
 
 # All Build rule for target.
-CMakeFiles/red_window.dir/all: CMakeFiles/sb7.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_window.dir/build.make CMakeFiles/red_window.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_window.dir/build.make CMakeFiles/red_window.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jdighton/Code/opengl/sb7code/build/CMakeFiles --progress-num=1,2 "Built target red_window"
-.PHONY : CMakeFiles/red_window.dir/all
+CMakeFiles/fragment_shader.dir/all: CMakeFiles/sb7.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fragment_shader.dir/build.make CMakeFiles/fragment_shader.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fragment_shader.dir/build.make CMakeFiles/fragment_shader.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jdighton/Code/opengl/sb7code/build/CMakeFiles --progress-num=1,2 "Built target fragment_shader"
+.PHONY : CMakeFiles/fragment_shader.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/red_window.dir/rule: cmake_check_build_system
+CMakeFiles/fragment_shader.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jdighton/Code/opengl/sb7code/build/CMakeFiles 10
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/red_window.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fragment_shader.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jdighton/Code/opengl/sb7code/build/CMakeFiles 0
-.PHONY : CMakeFiles/red_window.dir/rule
+.PHONY : CMakeFiles/fragment_shader.dir/rule
 
 # Convenience name for target.
-red_window: CMakeFiles/red_window.dir/rule
+fragment_shader: CMakeFiles/fragment_shader.dir/rule
 
-.PHONY : red_window
+.PHONY : fragment_shader
 
 # clean rule for target.
-CMakeFiles/red_window.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_window.dir/build.make CMakeFiles/red_window.dir/clean
-.PHONY : CMakeFiles/red_window.dir/clean
+CMakeFiles/fragment_shader.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fragment_shader.dir/build.make CMakeFiles/fragment_shader.dir/clean
+.PHONY : CMakeFiles/fragment_shader.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/sb7.dir

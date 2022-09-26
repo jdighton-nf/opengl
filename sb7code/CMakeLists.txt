@@ -40,7 +40,8 @@ add_library(sb7
 set(RUN_DIR ${PROJECT_SOURCE_DIR}/bin)
 
 set(EXAMPLES
-  red_window
+  fragment_shader
+  #red_window
   #alienrain
   #basicfbo
   #bindlesstex

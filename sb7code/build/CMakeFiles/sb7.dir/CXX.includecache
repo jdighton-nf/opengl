@@ -68,6 +68,14 @@ stdint.h
 inttypes.h
 -
 
+../include/object.h
+sb6mfile.h
+../include/sb6mfile.h
+GL/glcorearb.h
+-
+
+../include/sb6mfile.h
+
 ../include/sb7.h
 unistd.h
 -
@@ -84,6 +92,10 @@ string.h
 math.h
 -
 
+../include/sb7color.h
+vmath.h
+-
+
 ../include/sb7ext.h
 GL/glext.h
 ../include/GL/glext.h
@@ -94,12 +106,48 @@ GL/glext.h
 sb7.h
 -
 
+../include/vmath.h
+math.h
+-
+
 /home/jdighton/Code/opengl/sb7code/src/sb7/sb7.cpp
 sb7.h
 -
 GL/glext.h
 -
 string.h
+-
+
+/home/jdighton/Code/opengl/sb7code/src/sb7/sb7color.cpp
+vmath.h
+-
+sb7color.h
+-
+
+/home/jdighton/Code/opengl/sb7code/src/sb7/sb7ktx.cpp
+sb7ktx.h
+/home/jdighton/Code/opengl/sb7code/src/sb7/sb7ktx.h
+cstdio
+-
+cstdlib
+-
+cstring
+-
+GL/gl3w.h
+/home/jdighton/Code/opengl/sb7code/src/sb7/GL/gl3w.h
+
+/home/jdighton/Code/opengl/sb7code/src/sb7/sb7object.cpp
+GL/gl3w.h
+/home/jdighton/Code/opengl/sb7code/src/sb7/GL/gl3w.h
+object.h
+-
+stdio.h
+-
+
+/home/jdighton/Code/opengl/sb7code/src/sb7/sb7shader.cpp
+GL/gl3w.h
+/home/jdighton/Code/opengl/sb7code/src/sb7/GL/gl3w.h
+cstdio
 -
 
 /home/jdighton/Code/opengl/sb7code/src/sb7/sb7textoverlay.cpp

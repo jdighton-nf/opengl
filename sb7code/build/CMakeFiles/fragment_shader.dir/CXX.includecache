@@ -88,7 +88,7 @@ math.h
 GL/glext.h
 ../include/GL/glext.h
 
-/home/jdighton/Code/opengl/sb7code/src/red_window/red_window.cpp
+/home/jdighton/Code/opengl/sb7code/src/fragment_shader/fragment_shader.cpp
 sb7.h
-/home/jdighton/Code/opengl/sb7code/src/red_window/sb7.h
+/home/jdighton/Code/opengl/sb7code/src/fragment_shader/sb7.h
 

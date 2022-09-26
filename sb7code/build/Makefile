@@ -156,17 +156,17 @@ debug/fast:
 .PHONY : debug/fast
 
 #=============================================================================
-# Target rules for targets named red_window
+# Target rules for targets named fragment_shader
 
 # Build rule for target.
-red_window: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 red_window
-.PHONY : red_window
+fragment_shader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fragment_shader
+.PHONY : fragment_shader
 
 # fast build rule for target.
-red_window/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_window.dir/build.make CMakeFiles/red_window.dir/build
-.PHONY : red_window/fast
+fragment_shader/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fragment_shader.dir/build.make CMakeFiles/fragment_shader.dir/build
+.PHONY : fragment_shader/fast
 
 #=============================================================================
 # Target rules for targets named sb7
@@ -181,32 +181,32 @@ sb7/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sb7.dir/build.make CMakeFiles/sb7.dir/build
 .PHONY : sb7/fast
 
-src/red_window/red_window.o: src/red_window/red_window.cpp.o
+src/fragment_shader/fragment_shader.o: src/fragment_shader/fragment_shader.cpp.o
 
-.PHONY : src/red_window/red_window.o
+.PHONY : src/fragment_shader/fragment_shader.o
 
 # target to build an object file
-src/red_window/red_window.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_window.dir/build.make CMakeFiles/red_window.dir/src/red_window/red_window.cpp.o
-.PHONY : src/red_window/red_window.cpp.o
+src/fragment_shader/fragment_shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fragment_shader.dir/build.make CMakeFiles/fragment_shader.dir/src/fragment_shader/fragment_shader.cpp.o
+.PHONY : src/fragment_shader/fragment_shader.cpp.o
 
-src/red_window/red_window.i: src/red_window/red_window.cpp.i
+src/fragment_shader/fragment_shader.i: src/fragment_shader/fragment_shader.cpp.i
 
-.PHONY : src/red_window/red_window.i
+.PHONY : src/fragment_shader/fragment_shader.i
 
 # target to preprocess a source file
-src/red_window/red_window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_window.dir/build.make CMakeFiles/red_window.dir/src/red_window/red_window.cpp.i
-.PHONY : src/red_window/red_window.cpp.i
+src/fragment_shader/fragment_shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fragment_shader.dir/build.make CMakeFiles/fragment_shader.dir/src/fragment_shader/fragment_shader.cpp.i
+.PHONY : src/fragment_shader/fragment_shader.cpp.i
 
-src/red_window/red_window.s: src/red_window/red_window.cpp.s
+src/fragment_shader/fragment_shader.s: src/fragment_shader/fragment_shader.cpp.s
 
-.PHONY : src/red_window/red_window.s
+.PHONY : src/fragment_shader/fragment_shader.s
 
 # target to generate assembly for a file
-src/red_window/red_window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_window.dir/build.make CMakeFiles/red_window.dir/src/red_window/red_window.cpp.s
-.PHONY : src/red_window/red_window.cpp.s
+src/fragment_shader/fragment_shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fragment_shader.dir/build.make CMakeFiles/fragment_shader.dir/src/fragment_shader/fragment_shader.cpp.s
+.PHONY : src/fragment_shader/fragment_shader.cpp.s
 
 src/sb7/gl3w.o: src/sb7/gl3w.c.o
 
@@ -407,11 +407,11 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... debug"
 	@echo "... release"
-	@echo "... red_window"
+	@echo "... fragment_shader"
 	@echo "... sb7"
-	@echo "... src/red_window/red_window.o"
-	@echo "... src/red_window/red_window.i"
-	@echo "... src/red_window/red_window.s"
+	@echo "... src/fragment_shader/fragment_shader.o"
+	@echo "... src/fragment_shader/fragment_shader.i"
+	@echo "... src/fragment_shader/fragment_shader.s"
 	@echo "... src/sb7/gl3w.o"
 	@echo "... src/sb7/gl3w.i"
 	@echo "... src/sb7/gl3w.s"

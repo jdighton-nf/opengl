@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jdighton/Code/opengl/sb7code/src/red_window/red_window.cpp" "/home/jdighton/Code/opengl/sb7code/build/CMakeFiles/red_window.dir/src/red_window/red_window.cpp.o"
+  "/home/jdighton/Code/opengl/sb7code/src/fragment_shader/fragment_shader.cpp" "/home/jdighton/Code/opengl/sb7code/build/CMakeFiles/fragment_shader.dir/src/fragment_shader/fragment_shader.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
