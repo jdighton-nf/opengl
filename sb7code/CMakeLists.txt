@@ -41,7 +41,7 @@ set(RUN_DIR ${PROJECT_SOURCE_DIR}/bin)
 
 # set the name of the thing to build 
 set(EXAMPLES
-  fragment_shader
+  tesselated_triangle
   
 )
 

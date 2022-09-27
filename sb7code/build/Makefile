@@ -156,17 +156,17 @@ debug/fast:
 .PHONY : debug/fast
 
 #=============================================================================
-# Target rules for targets named fragment_shader
+# Target rules for targets named tesselated_triangle
 
 # Build rule for target.
-fragment_shader: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fragment_shader
-.PHONY : fragment_shader
+tesselated_triangle: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tesselated_triangle
+.PHONY : tesselated_triangle
 
 # fast build rule for target.
-fragment_shader/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fragment_shader.dir/build.make CMakeFiles/fragment_shader.dir/build
-.PHONY : fragment_shader/fast
+tesselated_triangle/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tesselated_triangle.dir/build.make CMakeFiles/tesselated_triangle.dir/build
+.PHONY : tesselated_triangle/fast
 
 #=============================================================================
 # Target rules for targets named sb7
@@ -180,33 +180,6 @@ sb7: cmake_check_build_system
 sb7/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sb7.dir/build.make CMakeFiles/sb7.dir/build
 .PHONY : sb7/fast
-
-src/fragment_shader/fragment_shader.o: src/fragment_shader/fragment_shader.cpp.o
-
-.PHONY : src/fragment_shader/fragment_shader.o
-
-# target to build an object file
-src/fragment_shader/fragment_shader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fragment_shader.dir/build.make CMakeFiles/fragment_shader.dir/src/fragment_shader/fragment_shader.cpp.o
-.PHONY : src/fragment_shader/fragment_shader.cpp.o
-
-src/fragment_shader/fragment_shader.i: src/fragment_shader/fragment_shader.cpp.i
-
-.PHONY : src/fragment_shader/fragment_shader.i
-
-# target to preprocess a source file
-src/fragment_shader/fragment_shader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fragment_shader.dir/build.make CMakeFiles/fragment_shader.dir/src/fragment_shader/fragment_shader.cpp.i
-.PHONY : src/fragment_shader/fragment_shader.cpp.i
-
-src/fragment_shader/fragment_shader.s: src/fragment_shader/fragment_shader.cpp.s
-
-.PHONY : src/fragment_shader/fragment_shader.s
-
-# target to generate assembly for a file
-src/fragment_shader/fragment_shader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fragment_shader.dir/build.make CMakeFiles/fragment_shader.dir/src/fragment_shader/fragment_shader.cpp.s
-.PHONY : src/fragment_shader/fragment_shader.cpp.s
 
 src/sb7/gl3w.o: src/sb7/gl3w.c.o
 
@@ -397,6 +370,33 @@ src/sb7/sb7textoverlay.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sb7.dir/build.make CMakeFiles/sb7.dir/src/sb7/sb7textoverlay.cpp.s
 .PHONY : src/sb7/sb7textoverlay.cpp.s
 
+src/tesselated_triangle/tesselated_triangle.o: src/tesselated_triangle/tesselated_triangle.cpp.o
+
+.PHONY : src/tesselated_triangle/tesselated_triangle.o
+
+# target to build an object file
+src/tesselated_triangle/tesselated_triangle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tesselated_triangle.dir/build.make CMakeFiles/tesselated_triangle.dir/src/tesselated_triangle/tesselated_triangle.cpp.o
+.PHONY : src/tesselated_triangle/tesselated_triangle.cpp.o
+
+src/tesselated_triangle/tesselated_triangle.i: src/tesselated_triangle/tesselated_triangle.cpp.i
+
+.PHONY : src/tesselated_triangle/tesselated_triangle.i
+
+# target to preprocess a source file
+src/tesselated_triangle/tesselated_triangle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tesselated_triangle.dir/build.make CMakeFiles/tesselated_triangle.dir/src/tesselated_triangle/tesselated_triangle.cpp.i
+.PHONY : src/tesselated_triangle/tesselated_triangle.cpp.i
+
+src/tesselated_triangle/tesselated_triangle.s: src/tesselated_triangle/tesselated_triangle.cpp.s
+
+.PHONY : src/tesselated_triangle/tesselated_triangle.s
+
+# target to generate assembly for a file
+src/tesselated_triangle/tesselated_triangle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tesselated_triangle.dir/build.make CMakeFiles/tesselated_triangle.dir/src/tesselated_triangle/tesselated_triangle.cpp.s
+.PHONY : src/tesselated_triangle/tesselated_triangle.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -407,11 +407,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... debug"
 	@echo "... release"
-	@echo "... fragment_shader"
 	@echo "... sb7"
-	@echo "... src/fragment_shader/fragment_shader.o"
-	@echo "... src/fragment_shader/fragment_shader.i"
-	@echo "... src/fragment_shader/fragment_shader.s"
+	@echo "... tesselated_triangle"
 	@echo "... src/sb7/gl3w.o"
 	@echo "... src/sb7/gl3w.i"
 	@echo "... src/sb7/gl3w.s"
@@ -433,6 +430,9 @@ help:
 	@echo "... src/sb7/sb7textoverlay.o"
 	@echo "... src/sb7/sb7textoverlay.i"
 	@echo "... src/sb7/sb7textoverlay.s"
+	@echo "... src/tesselated_triangle/tesselated_triangle.o"
+	@echo "... src/tesselated_triangle/tesselated_triangle.i"
+	@echo "... src/tesselated_triangle/tesselated_triangle.s"
 .PHONY : help
 
 

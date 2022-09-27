@@ -88,7 +88,7 @@ math.h
 GL/glext.h
 ../include/GL/glext.h
 
-/home/jdighton/Code/opengl/sb7code/src/fragment_shader/fragment_shader.cpp
+/home/jdighton/Code/opengl/sb7code/src/tesselated_triangle/tesselated_triangle.cpp
 sb7.h
-/home/jdighton/Code/opengl/sb7code/src/fragment_shader/sb7.h
+/home/jdighton/Code/opengl/sb7code/src/tesselated_triangle/sb7.h
 
