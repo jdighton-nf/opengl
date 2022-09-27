@@ -13,5 +13,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/jdighton/Code/opengl/sb7code/include -I/home/jdighton/Code/opengl/sb7code/extern/glfw-3.0.4/include
 
-CXX_FLAGS =  -fopenmp -D_LINUX -std=c++0x
+CXX_FLAGS =  -fopenmp -D_LINUX -std=c++17
 

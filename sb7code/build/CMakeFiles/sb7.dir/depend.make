@@ -5,12 +5,7 @@ CMakeFiles/sb7.dir/src/sb7/gl3w.c.o: ../include/GL/gl3w.h
 CMakeFiles/sb7.dir/src/sb7/gl3w.c.o: ../include/GL/glcorearb.h
 CMakeFiles/sb7.dir/src/sb7/gl3w.c.o: ../src/sb7/gl3w.c
 
-CMakeFiles/sb7.dir/src/sb7/sb7.cpp.o: ../extern/glfw-3.0.4/include/GLFW/glfw3.h
-CMakeFiles/sb7.dir/src/sb7/sb7.cpp.o: ../include/GL/gl3w.h
-CMakeFiles/sb7.dir/src/sb7/sb7.cpp.o: ../include/GL/glcorearb.h
 CMakeFiles/sb7.dir/src/sb7/sb7.cpp.o: ../include/GL/glext.h
-CMakeFiles/sb7.dir/src/sb7/sb7.cpp.o: ../include/sb7.h
-CMakeFiles/sb7.dir/src/sb7/sb7.cpp.o: ../include/sb7ext.h
 CMakeFiles/sb7.dir/src/sb7/sb7.cpp.o: ../src/sb7/sb7.cpp
 
 CMakeFiles/sb7.dir/src/sb7/sb7color.cpp.o: ../include/sb7color.h
@@ -32,12 +27,6 @@ CMakeFiles/sb7.dir/src/sb7/sb7shader.cpp.o: ../include/GL/gl3w.h
 CMakeFiles/sb7.dir/src/sb7/sb7shader.cpp.o: ../include/GL/glcorearb.h
 CMakeFiles/sb7.dir/src/sb7/sb7shader.cpp.o: ../src/sb7/sb7shader.cpp
 
-CMakeFiles/sb7.dir/src/sb7/sb7textoverlay.cpp.o: ../extern/glfw-3.0.4/include/GLFW/glfw3.h
-CMakeFiles/sb7.dir/src/sb7/sb7textoverlay.cpp.o: ../include/GL/gl3w.h
-CMakeFiles/sb7.dir/src/sb7/sb7textoverlay.cpp.o: ../include/GL/glcorearb.h
-CMakeFiles/sb7.dir/src/sb7/sb7textoverlay.cpp.o: ../include/GL/glext.h
-CMakeFiles/sb7.dir/src/sb7/sb7textoverlay.cpp.o: ../include/sb7.h
-CMakeFiles/sb7.dir/src/sb7/sb7textoverlay.cpp.o: ../include/sb7ext.h
 CMakeFiles/sb7.dir/src/sb7/sb7textoverlay.cpp.o: ../include/sb7ktx.h
 CMakeFiles/sb7.dir/src/sb7/sb7textoverlay.cpp.o: ../include/sb7textoverlay.h
 CMakeFiles/sb7.dir/src/sb7/sb7textoverlay.cpp.o: ../src/sb7/sb7textoverlay.cpp
