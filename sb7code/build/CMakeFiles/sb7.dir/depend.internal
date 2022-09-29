@@ -6,7 +6,12 @@ CMakeFiles/sb7.dir/src/sb7/gl3w.c.o
  ../include/GL/glcorearb.h
  /home/jdighton/Code/opengl/sb7code/src/sb7/gl3w.c
 CMakeFiles/sb7.dir/src/sb7/sb7.cpp.o
+ ../extern/glfw-3.0.4/include/GLFW/glfw3.h
+ ../include/GL/gl3w.h
+ ../include/GL/glcorearb.h
  ../include/GL/glext.h
+ ../include/sb7.h
+ ../include/sb7ext.h
  /home/jdighton/Code/opengl/sb7code/src/sb7/sb7.cpp
 CMakeFiles/sb7.dir/src/sb7/sb7color.cpp.o
  ../include/sb7color.h
@@ -28,6 +33,12 @@ CMakeFiles/sb7.dir/src/sb7/sb7shader.cpp.o
  ../include/GL/glcorearb.h
  /home/jdighton/Code/opengl/sb7code/src/sb7/sb7shader.cpp
 CMakeFiles/sb7.dir/src/sb7/sb7textoverlay.cpp.o
+ ../extern/glfw-3.0.4/include/GLFW/glfw3.h
+ ../include/GL/gl3w.h
+ ../include/GL/glcorearb.h
+ ../include/GL/glext.h
+ ../include/sb7.h
+ ../include/sb7ext.h
  ../include/sb7ktx.h
  ../include/sb7textoverlay.h
  /home/jdighton/Code/opengl/sb7code/src/sb7/sb7textoverlay.cpp

@@ -6,6 +6,28 @@
 
 #IncludeRegexTransform: 
 
+../extern/glfw-3.0.4/include/GLFW/glfw3.h
+stddef.h
+-
+OpenGL/gl3.h
+-
+OpenGL/gl.h
+-
+OpenGL/glu.h
+-
+GL/glcorearb.h
+-
+GLES/gl.h
+-
+GLES2/gl2.h
+-
+GLES3/gl3.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
+
 ../include/GL/gl3w.h
 GL/glcorearb.h
 -
@@ -54,9 +76,29 @@ GL/glcorearb.h
 
 ../include/sb6mfile.h
 
+../include/sb7.h
+unistd.h
+-
+GL/gl3w.h
+../include/GL/gl3w.h
+GLFW/glfw3.h
+../include/GLFW/glfw3.h
+sb7ext.h
+../include/sb7ext.h
+stdio.h
+-
+string.h
+-
+math.h
+-
+
 ../include/sb7color.h
 vmath.h
 -
+
+../include/sb7ext.h
+GL/glext.h
+../include/GL/glext.h
 
 ../include/sb7ktx.h
 

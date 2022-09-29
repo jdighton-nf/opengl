@@ -1,1 +1,0 @@
-/usr/bin/c++  -fopenmp -D_LINUX -std=c++17 -rdynamic CMakeFiles/scratch.dir/src/scratch/scratch.cpp.o -o ../bin/scratch   -L/home/jdighton/Code/opengl/sb7code/lib  -Wl,-rpath,/home/jdighton/Code/opengl/sb7code/lib lib/libsb7.a -lglfw -lX11 -lXrandr -lXinerama -lXi -lXxf86vm -lXcursor -lGL -lrt -ldl 
