@@ -374,4 +374,3 @@ int main(int argc, const char ** argv)              \
 #endif
 
 #endif /* __SB7_H__ */
-

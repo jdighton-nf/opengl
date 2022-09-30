@@ -22,3 +22,6 @@ so depending on how many must be drawn, glVertexID will interate throught the ve
 
 Chapter 3. Following the Pipeline
 The vertex shader is the only mandatory part of the pipeline. 
+In GLSL the mechanism for getting data in/out of shaders is to declare global vars with the in or out storage
+qualifiers. 
+
