@@ -72,7 +72,7 @@ CMAKE_BINARY_DIR = /home/jdighton/Code/opengl/sb7code/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/tesselated_triangle.dir/all
+all: CMakeFiles/buffers.dir/all
 all: CMakeFiles/sb7.dir/all
 
 .PHONY : all
@@ -85,7 +85,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/release.dir/clean
 clean: CMakeFiles/debug.dir/clean
-clean: CMakeFiles/tesselated_triangle.dir/clean
+clean: CMakeFiles/buffers.dir/clean
 clean: CMakeFiles/sb7.dir/clean
 
 .PHONY : clean
@@ -145,31 +145,31 @@ CMakeFiles/debug.dir/clean:
 .PHONY : CMakeFiles/debug.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/tesselated_triangle.dir
+# Target rules for target CMakeFiles/buffers.dir
 
 # All Build rule for target.
-CMakeFiles/tesselated_triangle.dir/all: CMakeFiles/sb7.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tesselated_triangle.dir/build.make CMakeFiles/tesselated_triangle.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tesselated_triangle.dir/build.make CMakeFiles/tesselated_triangle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jdighton/Code/opengl/sb7code/build/CMakeFiles --progress-num=9,10 "Built target tesselated_triangle"
-.PHONY : CMakeFiles/tesselated_triangle.dir/all
+CMakeFiles/buffers.dir/all: CMakeFiles/sb7.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buffers.dir/build.make CMakeFiles/buffers.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buffers.dir/build.make CMakeFiles/buffers.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jdighton/Code/opengl/sb7code/build/CMakeFiles --progress-num=1,2 "Built target buffers"
+.PHONY : CMakeFiles/buffers.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/tesselated_triangle.dir/rule: cmake_check_build_system
+CMakeFiles/buffers.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jdighton/Code/opengl/sb7code/build/CMakeFiles 10
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tesselated_triangle.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/buffers.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jdighton/Code/opengl/sb7code/build/CMakeFiles 0
-.PHONY : CMakeFiles/tesselated_triangle.dir/rule
+.PHONY : CMakeFiles/buffers.dir/rule
 
 # Convenience name for target.
-tesselated_triangle: CMakeFiles/tesselated_triangle.dir/rule
+buffers: CMakeFiles/buffers.dir/rule
 
-.PHONY : tesselated_triangle
+.PHONY : buffers
 
 # clean rule for target.
-CMakeFiles/tesselated_triangle.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tesselated_triangle.dir/build.make CMakeFiles/tesselated_triangle.dir/clean
-.PHONY : CMakeFiles/tesselated_triangle.dir/clean
+CMakeFiles/buffers.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buffers.dir/build.make CMakeFiles/buffers.dir/clean
+.PHONY : CMakeFiles/buffers.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/sb7.dir
@@ -178,7 +178,7 @@ CMakeFiles/tesselated_triangle.dir/clean:
 CMakeFiles/sb7.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sb7.dir/build.make CMakeFiles/sb7.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sb7.dir/build.make CMakeFiles/sb7.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jdighton/Code/opengl/sb7code/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target sb7"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jdighton/Code/opengl/sb7code/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10 "Built target sb7"
 .PHONY : CMakeFiles/sb7.dir/all
 
 # Build rule for subdir invocation for target.
