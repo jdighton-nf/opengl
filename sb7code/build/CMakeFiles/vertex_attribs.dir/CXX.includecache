@@ -94,11 +94,11 @@ iostream
 GL/gl3w.h
 ../include/GL/gl3w.h
 
-/home/jdighton/Code/opengl/sb7code/src/buffers/buffers.cpp
+/home/jdighton/Code/opengl/sb7code/src/vertex_attribs/vertex_attribs.cpp
 sb7.h
-/home/jdighton/Code/opengl/sb7code/src/buffers/sb7.h
+/home/jdighton/Code/opengl/sb7code/src/vertex_attribs/sb7.h
 validate_program.h
-/home/jdighton/Code/opengl/sb7code/src/buffers/validate_program.h
+/home/jdighton/Code/opengl/sb7code/src/vertex_attribs/validate_program.h
 iostream
 -
 

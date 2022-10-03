@@ -1,1 +1,0 @@
-/usr/bin/c++  -fopenmp -D_LINUX -std=c++17 -rdynamic CMakeFiles/buffers.dir/src/buffers/buffers.cpp.o -o ../bin/buffers   -L/home/jdighton/Code/opengl/sb7code/lib  -Wl,-rpath,/home/jdighton/Code/opengl/sb7code/lib lib/libsb7.a -lglfw -lX11 -lXrandr -lXinerama -lXi -lXxf86vm -lXcursor -lGL -lrt -ldl 

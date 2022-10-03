@@ -156,17 +156,17 @@ debug/fast:
 .PHONY : debug/fast
 
 #=============================================================================
-# Target rules for targets named buffers
+# Target rules for targets named vertex_attribs
 
 # Build rule for target.
-buffers: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 buffers
-.PHONY : buffers
+vertex_attribs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vertex_attribs
+.PHONY : vertex_attribs
 
 # fast build rule for target.
-buffers/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/buffers.dir/build.make CMakeFiles/buffers.dir/build
-.PHONY : buffers/fast
+vertex_attribs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vertex_attribs.dir/build.make CMakeFiles/vertex_attribs.dir/build
+.PHONY : vertex_attribs/fast
 
 #=============================================================================
 # Target rules for targets named sb7
@@ -180,33 +180,6 @@ sb7: cmake_check_build_system
 sb7/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sb7.dir/build.make CMakeFiles/sb7.dir/build
 .PHONY : sb7/fast
-
-src/buffers/buffers.o: src/buffers/buffers.cpp.o
-
-.PHONY : src/buffers/buffers.o
-
-# target to build an object file
-src/buffers/buffers.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/buffers.dir/build.make CMakeFiles/buffers.dir/src/buffers/buffers.cpp.o
-.PHONY : src/buffers/buffers.cpp.o
-
-src/buffers/buffers.i: src/buffers/buffers.cpp.i
-
-.PHONY : src/buffers/buffers.i
-
-# target to preprocess a source file
-src/buffers/buffers.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/buffers.dir/build.make CMakeFiles/buffers.dir/src/buffers/buffers.cpp.i
-.PHONY : src/buffers/buffers.cpp.i
-
-src/buffers/buffers.s: src/buffers/buffers.cpp.s
-
-.PHONY : src/buffers/buffers.s
-
-# target to generate assembly for a file
-src/buffers/buffers.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/buffers.dir/build.make CMakeFiles/buffers.dir/src/buffers/buffers.cpp.s
-.PHONY : src/buffers/buffers.cpp.s
 
 src/sb7/gl3w.o: src/sb7/gl3w.c.o
 
@@ -397,6 +370,33 @@ src/sb7/sb7textoverlay.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sb7.dir/build.make CMakeFiles/sb7.dir/src/sb7/sb7textoverlay.cpp.s
 .PHONY : src/sb7/sb7textoverlay.cpp.s
 
+src/vertex_attribs/vertex_attribs.o: src/vertex_attribs/vertex_attribs.cpp.o
+
+.PHONY : src/vertex_attribs/vertex_attribs.o
+
+# target to build an object file
+src/vertex_attribs/vertex_attribs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vertex_attribs.dir/build.make CMakeFiles/vertex_attribs.dir/src/vertex_attribs/vertex_attribs.cpp.o
+.PHONY : src/vertex_attribs/vertex_attribs.cpp.o
+
+src/vertex_attribs/vertex_attribs.i: src/vertex_attribs/vertex_attribs.cpp.i
+
+.PHONY : src/vertex_attribs/vertex_attribs.i
+
+# target to preprocess a source file
+src/vertex_attribs/vertex_attribs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vertex_attribs.dir/build.make CMakeFiles/vertex_attribs.dir/src/vertex_attribs/vertex_attribs.cpp.i
+.PHONY : src/vertex_attribs/vertex_attribs.cpp.i
+
+src/vertex_attribs/vertex_attribs.s: src/vertex_attribs/vertex_attribs.cpp.s
+
+.PHONY : src/vertex_attribs/vertex_attribs.s
+
+# target to generate assembly for a file
+src/vertex_attribs/vertex_attribs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vertex_attribs.dir/build.make CMakeFiles/vertex_attribs.dir/src/vertex_attribs/vertex_attribs.cpp.s
+.PHONY : src/vertex_attribs/vertex_attribs.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -407,11 +407,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... debug"
 	@echo "... release"
-	@echo "... buffers"
 	@echo "... sb7"
-	@echo "... src/buffers/buffers.o"
-	@echo "... src/buffers/buffers.i"
-	@echo "... src/buffers/buffers.s"
+	@echo "... vertex_attribs"
 	@echo "... src/sb7/gl3w.o"
 	@echo "... src/sb7/gl3w.i"
 	@echo "... src/sb7/gl3w.s"
@@ -433,6 +430,9 @@ help:
 	@echo "... src/sb7/sb7textoverlay.o"
 	@echo "... src/sb7/sb7textoverlay.i"
 	@echo "... src/sb7/sb7textoverlay.s"
+	@echo "... src/vertex_attribs/vertex_attribs.o"
+	@echo "... src/vertex_attribs/vertex_attribs.i"
+	@echo "... src/vertex_attribs/vertex_attribs.s"
 .PHONY : help
 
 

@@ -72,7 +72,7 @@ CMAKE_BINARY_DIR = /home/jdighton/Code/opengl/sb7code/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/buffers.dir/all
+all: CMakeFiles/vertex_attribs.dir/all
 all: CMakeFiles/sb7.dir/all
 
 .PHONY : all
@@ -85,7 +85,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/release.dir/clean
 clean: CMakeFiles/debug.dir/clean
-clean: CMakeFiles/buffers.dir/clean
+clean: CMakeFiles/vertex_attribs.dir/clean
 clean: CMakeFiles/sb7.dir/clean
 
 .PHONY : clean
@@ -145,31 +145,31 @@ CMakeFiles/debug.dir/clean:
 .PHONY : CMakeFiles/debug.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/buffers.dir
+# Target rules for target CMakeFiles/vertex_attribs.dir
 
 # All Build rule for target.
-CMakeFiles/buffers.dir/all: CMakeFiles/sb7.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/buffers.dir/build.make CMakeFiles/buffers.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/buffers.dir/build.make CMakeFiles/buffers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jdighton/Code/opengl/sb7code/build/CMakeFiles --progress-num=1,2 "Built target buffers"
-.PHONY : CMakeFiles/buffers.dir/all
+CMakeFiles/vertex_attribs.dir/all: CMakeFiles/sb7.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vertex_attribs.dir/build.make CMakeFiles/vertex_attribs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vertex_attribs.dir/build.make CMakeFiles/vertex_attribs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jdighton/Code/opengl/sb7code/build/CMakeFiles --progress-num=9,10 "Built target vertex_attribs"
+.PHONY : CMakeFiles/vertex_attribs.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/buffers.dir/rule: cmake_check_build_system
+CMakeFiles/vertex_attribs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jdighton/Code/opengl/sb7code/build/CMakeFiles 10
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/buffers.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/vertex_attribs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jdighton/Code/opengl/sb7code/build/CMakeFiles 0
-.PHONY : CMakeFiles/buffers.dir/rule
+.PHONY : CMakeFiles/vertex_attribs.dir/rule
 
 # Convenience name for target.
-buffers: CMakeFiles/buffers.dir/rule
+vertex_attribs: CMakeFiles/vertex_attribs.dir/rule
 
-.PHONY : buffers
+.PHONY : vertex_attribs
 
 # clean rule for target.
-CMakeFiles/buffers.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/buffers.dir/build.make CMakeFiles/buffers.dir/clean
-.PHONY : CMakeFiles/buffers.dir/clean
+CMakeFiles/vertex_attribs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vertex_attribs.dir/build.make CMakeFiles/vertex_attribs.dir/clean
+.PHONY : CMakeFiles/vertex_attribs.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/sb7.dir
@@ -178,7 +178,7 @@ CMakeFiles/buffers.dir/clean:
 CMakeFiles/sb7.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sb7.dir/build.make CMakeFiles/sb7.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sb7.dir/build.make CMakeFiles/sb7.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jdighton/Code/opengl/sb7code/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10 "Built target sb7"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jdighton/Code/opengl/sb7code/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target sb7"
 .PHONY : CMakeFiles/sb7.dir/all
 
 # Build rule for subdir invocation for target.

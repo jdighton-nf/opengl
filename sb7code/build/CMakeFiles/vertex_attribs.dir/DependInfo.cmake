@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jdighton/Code/opengl/sb7code/src/buffers/buffers.cpp" "/home/jdighton/Code/opengl/sb7code/build/CMakeFiles/buffers.dir/src/buffers/buffers.cpp.o"
+  "/home/jdighton/Code/opengl/sb7code/src/vertex_attribs/vertex_attribs.cpp" "/home/jdighton/Code/opengl/sb7code/build/CMakeFiles/vertex_attribs.dir/src/vertex_attribs/vertex_attribs.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

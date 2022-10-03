@@ -41,8 +41,7 @@ set(RUN_DIR ${PROJECT_SOURCE_DIR}/bin)
 
 # set the name of the thing to build 
 set(EXAMPLES
-  tesselated_triangle
-  
+  vertex_attribs
 )
 
 find_package(OpenMP)
