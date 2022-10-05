@@ -119,6 +119,4 @@ private:
     GLuint* buffers; // buffer array on the free store 
 };
 
-
-
 DECLARE_MAIN(a)

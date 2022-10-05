@@ -1,5 +1,5 @@
 /*
- * Copyright © 2012-2015 Graham Sellers
+ * Copyright ï¿½ 2012-2015 Graham Sellers
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
@@ -46,21 +46,27 @@ object::~object()
 
 void object::load(const char * filename)
 {
+    // get a pointer to the file data stream object
     FILE * infile = fopen(filename, "rb");
     size_t filesize;
     char * data;
 
     this->free();
 
+    // read in file to a char array 
     fseek(infile, 0, SEEK_END);
     filesize = ftell(infile);
     fseek(infile, 0, SEEK_SET);
-
     data = new char[filesize];
-
     fread(data, filesize, 1, infile);
 
+    // data is a *char[]
     char * ptr = data;
+
+    /*
+        I don't really understand what is happening here. 
+        
+    */
     SB6M_HEADER * header = (SB6M_HEADER *)ptr;
     ptr += header->size;
 

@@ -1,5 +1,5 @@
 /*
- * Copyright © 2012-2015 Graham Sellers
+ * Copyright ï¿½ 2012-2015 Graham Sellers
  *
  * This code is part of the OpenGL SuperBible, 7th Edition.
  *
