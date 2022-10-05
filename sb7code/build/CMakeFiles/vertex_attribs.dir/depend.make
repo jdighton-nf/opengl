@@ -8,5 +8,6 @@ CMakeFiles/vertex_attribs.dir/src/vertex_attribs/vertex_attribs.cpp.o: ../includ
 CMakeFiles/vertex_attribs.dir/src/vertex_attribs/vertex_attribs.cpp.o: ../include/sb7.h
 CMakeFiles/vertex_attribs.dir/src/vertex_attribs/vertex_attribs.cpp.o: ../include/sb7ext.h
 CMakeFiles/vertex_attribs.dir/src/vertex_attribs/vertex_attribs.cpp.o: ../include/validate_program.h
+CMakeFiles/vertex_attribs.dir/src/vertex_attribs/vertex_attribs.cpp.o: ../include/vmath.h
 CMakeFiles/vertex_attribs.dir/src/vertex_attribs/vertex_attribs.cpp.o: ../src/vertex_attribs/vertex_attribs.cpp
 

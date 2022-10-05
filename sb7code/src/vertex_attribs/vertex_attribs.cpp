@@ -1,4 +1,5 @@
 #include "sb7.h"
+#include "vmath.h"
 #include "validate_program.h" 
 #include <iostream>
 
@@ -6,12 +7,37 @@ class a : public sb7::application {
 public:    
   
     void startup(){
-        glPointSize(40.0f); 
+
+        // load shaders
         program_object = { loadProgram() };
+        
+        // create vao
         glGenVertexArrays(1, &vao);
         glBindVertexArray(vao);
-        buffers  = { bufferMagic() }; 
-    
+        
+        // create a buffer and give it our vertex data
+        int n { 1 }; // create 1 buffer
+        int size { 1024 };
+        GLuint (*buffer_arr[]) { new GLuint[n] };
+        glCreateBuffers(n, *buffer_arr); 
+        glNamedBufferStorage(*buffer_arr[0], size, NULL, GL_DYNAMIC_STORAGE_BIT);
+        glBindBuffer(GL_ARRAY_BUFFER, *buffer_arr[0]);
+
+        static const float vertex_data[]{
+        0.0, 0.0, 0.0, 1.0
+        };
+
+        glNamedBufferSubData(*buffer_arr[0], 0, size, &vertex_data);
+
+        // set up vertex array attribs
+
+        // 
+        glVertexArrayVertexBuffer(vao, 0, *buffer_arr[0], 0, sizeof(vmath::vec4));
+        
+        glVertexArrayAttribFormat(vao, 0, 4, GL_FLOAT, GL_FALSE, 0);
+        
+        glEnableVertexArrayAttrib(vao, 0); 
+        buffers = *buffer_arr; 
    }
   
     void shutdown(){
@@ -21,8 +47,10 @@ public:
     GLuint loadProgram(){
         const GLchar* vs_src[] {
             "#version 450 core \n"
+            // there seems to be something in location 0 by default
+            "layout (location = 0) in vec4 position;"
             "void main(void){"
-            "   gl_Position = vec4(0.0, 0.0, 0.5, 1.0);"
+            "   gl_Position = position;"
             "}"
         };
         const GLchar* fs_src[] {
@@ -55,44 +83,42 @@ public:
             linking ALWAYS. Its job is to notify me when something goes wrong. 
         */
     }
-  
-    GLuint* bufferMagic();
 
     void render(double currentTime){
         const GLfloat color[] {
             0.0f, 0.2f, 0.2f, 1.0f
         };
+
+        const GLfloat vertex_data[]{
+            (float) cos(currentTime) * 0.75f,
+            (float) sin(currentTime) * 0.75f, 
+            0.0, 
+            1.0,
+            (float) cos(currentTime) * 0.50f,
+            (float) sin(currentTime) * 0.50f, 
+            0.0, 
+            1.0,
+            (float) cos(currentTime) * 0.25f,
+            (float) sin(currentTime) * 0.25f, 
+            0.0, 
+            1.0
+        };
+
+        // strangely enough this is allowed
+        glNamedBufferSubData(buffers[0], 0, 1024, &vertex_data); 
+
         glClearBufferfv(GL_COLOR, 0, color);
         glUseProgram(program_object);
-        glDrawArrays(GL_POINTS, 0, 1);
+        const GLuint (*indices[]) {new GLuint[3]{0, 1, 2}}; 
+        glDrawArrays(GL_POINTS, 0, 3);
+        
     }
 private:
     GLuint program_object;
     GLuint vao; 
-    GLuint* buffers; 
+    GLuint* buffers; // buffer array on the free store 
 };
 
-GLuint* a::bufferMagic(){
-    int n { 1 }; 
-    /*
-        my segfault was due to creating an array to pointers to GLuints, instead of a pointer
-        to an array of GLuints 
-    */
-    GLuint (*buffer_arr[]) { new GLuint[n] }; 
-    glCreateBuffers(n, *buffer_arr); 
-    glNamedBufferStorage(*buffer_arr[0], 64, NULL, GL_DYNAMIC_STORAGE_BIT);
-    glBindBuffer(GL_ARRAY_BUFFER, *buffer_arr[0]);
 
-    static const float data[]{
-        0.25, -0.25, 0.5, 1.0,
-       -0.25, -0.25, 0.5, 1.0,
-        0.25,  0.25, 0.5, 1.0
-    };
-    
-    // ask OpenGL to write the data
-    glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(data), data);
-
-    return buffers; 
-}
 
 DECLARE_MAIN(a)

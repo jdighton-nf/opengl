@@ -9,4 +9,5 @@ CMakeFiles/vertex_attribs.dir/src/vertex_attribs/vertex_attribs.cpp.o
  ../include/sb7.h
  ../include/sb7ext.h
  ../include/validate_program.h
+ ../include/vmath.h
  /home/jdighton/Code/opengl/sb7code/src/vertex_attribs/vertex_attribs.cpp
